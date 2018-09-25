@@ -1,10 +1,6 @@
-@Library("recipe-library") _
-    Install {
-        projectName = "Project1"
-        serverDomain = "Project1 Server Domain"
-    }
 pipeline {
   agent any
+    @Library("recipe-library") _
   environment {   
                     GOPATH = "/home/jenkins"
                     PATH = "$PATH" + "${GOPATH}/bin:/usr/lib/go-1.10/bin"
