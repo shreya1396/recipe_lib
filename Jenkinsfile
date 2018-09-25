@@ -1,4 +1,9 @@
 pipeline {
+  @Library("recipe-library") _
+    Install {
+        projectName = "Project1"
+        serverDomain = "Project1 Server Domain"
+    }
   agent any
   environment {   
                     GOPATH = "/home/jenkins"
